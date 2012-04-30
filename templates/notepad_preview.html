@@ -1,0 +1,11 @@
+<li>
+  <a href="{{ url_for('note', filename=filename ) }}">
+    <span>{{ date }}</span>
+    <h3 class="title">
+      {% block title %}{% endblock %}
+    </h3>
+    <p>
+    {% block preview %}{% endblock %}
+    </p>
+  </a>
+</li>

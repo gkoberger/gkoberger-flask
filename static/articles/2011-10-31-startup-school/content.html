@@ -1,0 +1,170 @@
+{% extends template %}
+
+{% block title %}Startup School 2011{% endblock %}
+
+{% block header %}
+<h1>
+  <span>Lessons From</span>
+  Startup School 2011
+</h1>
+{% endblock %}
+
+{% macro nav(bottom) %}
+<ul class="speakers {% if bottom: %}bottom{% endif %}">
+  <li>
+    <a href="#" class="yellow on" data-who="ma">
+      <span><strong>Marc Andreessen</strong><br>Partner, Andreessen Horowitz</span>
+      <div><img src="{{ base }}/pma.png"></div>
+    </a>
+  </li>
+  <li>
+    <a href="#" data-who="jl" class="blue">
+      <span><strong>James Lindenbaum</strong><br>Founder, Heroku</span>
+      <div><img src="{{ base }}/pjl.png"></div>
+    </a>
+  </li>
+  <li>
+    <a href="#" data-who="jg" class="red">
+      <span><strong>Jim Goetz</strong><br>Partner, Sequoia</span>
+      <div><img src="{{ base }}/pjg.png"></div>
+    </a>
+  </li>
+  <li>
+    <a href="#" data-who="ak" class="green">
+      <span><strong>Ashton Kutcher</strong><br>Investor, A-Grade</span>
+      <div><img src="{{ base }}/pak.png"></div>
+    </a>
+  </li>
+  <li>
+    <a href="#" data-who="mm" class="yellow">
+      <span><strong>Matt Mullenweg</strong><br>Founder, Automattic</span>
+      <div><img src="{{ base }}/pmm.png"></div>
+    </a>
+  </li>
+  <li>
+    <a href="#" data-who="mp" class="blue">
+      <span><strong>Mark Pincus</strong><br>Founder, Zynga</span>
+      <div><img src="{{ base }}/pmp.png"></div>
+    </a>
+  </li>
+  <li>
+    <a href="#" data-who="pg" class="red">
+      <span><strong>Paul Graham</strong><br>Partner, Y Combinator</span>
+      <div><img src="{{ base }}/ppg.png"></div>
+    </a>
+  </li>
+  <li>
+    <a href="#" data-who="mz" class="orange">
+      <span><strong>Mark Zuckerberg</strong><br>Founder, Facebook</span>
+      <div><img src="{{ base }}/pmz.png"></div>
+    </a>
+  </li>
+  <li>
+    <a href="#" class="yellow" data-who="sc">
+      <span><strong>Stephen Cohen</strong><br>Founder, Palantir</span>
+      <div><img src="{{ base }}/psc.png"></div>
+    </a>
+  </li>
+  <li>
+    <a href="#" class="blue" data-who="ml">
+      <span><strong>Max Levchin</strong><br>Founder, Slide, Paypal</span>
+      <div><img src="{{ base }}/pml.png"></div>
+    </a>
+  </li>
+  <li>
+    <a href="#" class="red" data-who="rc">
+      <span><strong>Ron Conway</strong><br>Partner, SV Angel</span>
+      <div><img src="{{ base }}/prc.png"></div>
+    </a>
+  </li>
+  <li>
+    <a href="#" class="yellow" data-who="dh">
+      <span><strong>Drew Houston</strong><br>Founder, Dropbox</span>
+      <div><img src="{{ base }}/pdh.png"></div>
+    </a>
+  </li>
+</ul>
+{% endmacro %}
+
+{% block content %}
+{{ nav() }}
+<div id="sketch">
+  <div class="s-ma"><img src="{{ base }}/tma.png" alt="Marc Andreesen"><img src="{{ base }}/ma.png" alt="Marc Andreessen" title="Marc Andreessen"></div>
+  <div class="s-jl"><img src="{{ base }}/tjl.png" alt="James Lindenbaum" title="James Lindenbaum"><img src="{{ base }}/jl.png" alt="James Lindenbaum" title="James Lindenbaum"></div>
+  <div class="s-jg"><img src="{{ base }}/tjg.png" alt="Jim Goetz" title="Jim Goetz"><img src="{{ base }}/jg.png" alt="Jim Goetz" title="Jim Goetz"></div>
+  <div class="s-ak"><img src="{{ base }}/tak.png" alt="Ashton Kutcher" title="Ashton Kutcher"><img src="{{ base }}/ak.png" alt="Ashton Kutcher" title="Ashton Kutcher"></div>
+  <div class="s-mm"><img src="{{ base }}/tmm.png" alt="Matt Mullenweg" title="Matt Mullenweg"><img src="{{ base }}/mm.png" alt="Matt Mullenweg" title="Matt Mullenweg"></div>
+  <div class="s-mp"><img src="{{ base }}/tmp.png" alt="Mark Pincus" title="Mark Pincus"><img src="{{ base }}/mp.png" alt="Mark Pincus" title="Mark Pincus"></div>
+  <div class="s-pg"><img src="{{ base }}/tpg.png" alt="Paul Graham" title="Paul Graham"><img src="{{ base }}/pg.png" alt="Paul Graham" title="Paul Graham"></div>
+  <div class="s-mz"><img src="{{ base }}/tmz.png" alt="Mark Zuckerberg" title="Mark Zuckerberg"><img src="{{ base }}/mz.png" alt="Mark Zuckerberg" title="Mark Zuckerberg"></div>
+  <div class="s-sc"><img src="{{ base }}/tsc.png" alt="Stephen Cohen" title="Stephen Cohen"><img src="{{ base }}/sc.png" alt="Stephen Cohen" title="Stephen Cohen"></div>
+  <div class="s-ml"><img src="{{ base }}/tml.png" alt="Max Levchin" title="Max Levchin"><img src="{{ base }}/ml.png" alt="Max Levchin" title="Max Levchin"></div>
+  <div class="s-rc"><img src="{{ base }}/trc.png" alt="Ron Conway" title="Ron Conway"><img src="{{ base }}/rc.png" alt="Ron Conway" title="Ron Conway"></div>
+  <div class="s-dh"><img src="{{ base }}/tdh.png" alt="Drew Houston" title="Drew Houston"><img src="{{ base }}/dh.png" alt="Drew Houston" title="Drew Houston"></div>
+</div>
+{{ nav(True) }}
+
+<p><em>Lessons from Startup School: An Illustrated Guide</em> was created by Gregory Koberger. If you liked it, you can follow him at <strong><a
+    target="_blank" href="http://twitter.com/gkoberger">@gkoberger</a></strong>. This guide is meant to supplement <strong><a href="http://www.justin.tv/startupschool"
+    target="_blank">the
+    talks</a></strong>, not replace them. Many things don't make sense
+out of context. Not everything is an exact quote; some quotes were paraphrased to better convey the meaning. It was done in realtime, so there are probably
+typos and mistakes.</p>
+{% endblock %}
+
+{% block content_js %}
+<script>
+function initBoth() {
+
+}
+
+function initScreen() {
+  $('#sketch div').not(':first').hide();
+
+  $('.screen .speakers a').each(function() {
+    $(this).addClass('c' + Math.floor(Math.random() * 5));
+  }).click(function() {
+    var $el = $(this);
+    $('.speakers a').removeClass('on');
+    $('.screen .speakers [data-who=' + $el.attr('data-who') + ']').addClass('on');
+    if($el.closest('ul').hasClass('bottom')) {
+      $('html, body').animate({'scrollTop': 525}, 800);
+    }
+    $('#sketch div:visible').fadeOut(function() {
+      $('#sketch .s-' + $el.attr('data-who')).fadeIn(function() {
+        $('#sketch').css('height', $(this).height());
+      });
+    });
+    window.location.hash = $el.attr('data-who');
+    return false;
+  });
+
+  $(window).bind('hashchange', hashChange);
+  function hashChange() {
+    if(window.location.hash) {
+      var hash = window.location.hash.replace(/#/, ''),
+          who = $('.screen .speakers [data-who=' + hash + ']');
+
+      if(who.length) {
+        who.first().trigger('click');
+      }
+    }
+  }
+  hashChange();
+  setTimeout(function() {
+    $('.open_comments').trigger('click');
+  }, 500);
+}
+
+function initMobile() {
+
+}
+</script>
+{% endblock %}
+
+{% block preview %}
+<div class="parallax">
+  <div class="y">Y</div>
+</div>
+{% endblock %}
+

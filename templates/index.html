@@ -1,0 +1,31 @@
+{% extends "parent.html" %}
+
+{% block body %}
+<div id="sections">
+  <section id="intro" class="intro">
+  Product manager at <a href="http://mozilla.org" class="mozilla" target="_blank">Mozilla</a>.
+  Follow me on <a href="http://twitter.com/gkoberger" class="twitter" target="_blank">Twitter</a>
+  or <a href="http://github.com/gkoberger" class="github" target="_blank">Github</a>.
+  </section>
+
+  <section id="section_articles">
+    <ul>
+      {% for article in articles %}
+        {{ article['rendered']|safe }}
+      {% endfor %}
+    </ul>
+  </section>
+
+  <section id="section_notepad">
+    <h2 class="title">
+      <span class="pattern"><a href="{{ url_for('notes') }}">Notepad</a></span>
+    </h2>
+    <ul>
+      {% for note in notepads %}
+        {{ note['rendered']|safe }}
+      {% endfor %}
+    </ul>
+  </section>
+</div>
+{% endblock %}
+

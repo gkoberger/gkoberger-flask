@@ -1,0 +1,19 @@
+<li>
+<a href="{{ url_for('article', filename=filename) }}" id="articles-{{ slug }}" class="preview">
+    <div class="article_icon">
+      <div class="article_icon_inner">
+        {% block preview %}{% endblock %}
+      </div>
+    </div>
+    <h3 class="title">
+      {% if short_title %}
+        {{ short_title }}
+      {% else %}
+        {{ self.title() }}
+        {% endif %}
+    </h3>
+    {#
+    {{ date|datetimeformat }}
+    #}
+  </a>
+</li>

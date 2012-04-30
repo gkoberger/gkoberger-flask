@@ -1,0 +1,9 @@
+{% set title="Notes" %}
+{% extends "parent.html" %}
+{% block body %}
+<div id="notes" class="all_notes">
+  {% for note in notes %}
+  {{ note['rendered']|safe }}
+  {% endfor %}
+</div>
+{% endblock %}

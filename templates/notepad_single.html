@@ -1,0 +1,38 @@
+<div class="note" id="{{ slug }}">
+  <div class="title_date gar">{{ date }}</div>
+  <h2 class="title">
+    <a href="{{ ('notepad/%s' % filename) }}">{{ self.title() }}</a>
+  </h2>
+  <div class="note_container">
+    <div class="text">
+      {# TODO: Footnote! #}
+      {{ self.content()|safe }}
+      <div class="notepad_footer">
+        {
+        {% set short_url = ('notepad/%s' % filename) %}
+        {# TODO: URLENCODE #}
+        {% set tweet = ("%s by @gkoberger %s" % (self.title(), short_url)) %}
+        <a href="http://twitter.com/?status={{ tweet }}" target="_new">tweet this</a>
+        &middot; <a href="http://twitter.com/gkoberger">follow <strong>@gkoberger</strong></a>
+        &middot; <a href="{{ ('notepad/%s#comments' % filename) }}">comments</a>
+        }
+      </div>
+    </div>
+    <div class="sidebar">
+      <div class="sidebar_scroll">
+        <!-- <div class="sidebar_title">{{ self.title() }}</div> -->
+        {{ date }}<br />
+        by {% block author %}<a href="http://gkoberger.net/">Gregory</a>{% endblock %}<br />
+        <a href="{{ ('notepad/%s#comments' % filename) }}">comments</a>
+        <!-- t f a c -->
+        <div class="sidebar_nav">
+          <a href="#" class="nav_prev">&laquo; prev</a>
+          &middot;
+          <a href="#" class="nav_top">top</a>
+          &middot;
+          <a href="#" class="nav_next">next &raquo;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
